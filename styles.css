@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: flex-start; /* Aligns content to the left */
+    align-items: center;
+    height: 100vh;
+    padding-left: 20px; /* Adds some padding on the left */
+}
+
+/* Mobile phone frame */
+.phone {
+    width: 320px;
+    height: 600px;
+    background-color: #333;
+    border-radius: 40px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    position: relative;
+    margin-right: auto; /* Aligns to the left with no right margin */
+}
+
+/* Mobile phone screen */
+.screen {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* The container inside the phone for the lyrics */
+.container {
+    width: 100%;
+    height: 90%;
+    overflow: hidden;
+    padding: 10px;
+}
+
+/* Lyrics scrolling area */
+.lyrics {
+    display: block;
+    height: 100%;
+    animation: scrollUp 20s linear infinite;
+}
+
+/* Style for individual lyrics */
+.lyrics p {
+    text-align: center;
+    font-size: 1.2em;
+    color: #333;
+    padding: 10px 0;
+}
+
+/* Scrolling animation */
+@keyframes scrollUp {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+/* Adding some design elements for the phone */
+.phone:before {
+    content: '';
+    width: 60px;
+    height: 5px;
+    background: #666;
+    border-radius: 3px;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.phone:after {
+    content: '';
+    width: 35px;
+    height: 35px;
+    background: #000;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
